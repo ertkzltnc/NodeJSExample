@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Debug Exercise</title>
+</head>
+<script>
+
+    function getFibonacci(fiboNumber){
+        var result=0;
+        if(fiboNumber===0){
+            result=0;
+        }else if(fiboNumber==1){
+            result=1;
+        }else {
+            var prev1=getFibonacci(fiboNumber-2);
+            var prev2=getFibonacci(fiboNumber-1);
+            result=prev1+prev2;
+        }
+        return result;
+    }
+    
+
+</script>
+<body>
+     <button onclick="getFibonacci(5)">Fibonacci</button>
+</body>
+</html>
