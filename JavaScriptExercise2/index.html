@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Uygulama 2</title>
+    <script>
+        var personList =[
+                {id:1,name:"Ertuğrul",age:25},
+                {id:2,name:"Enes",age:18},
+                {id:3,name:"Erkan",age:9},
+               
+        ];
+
+        function Listele(){
+            var listArea=document.getElementById("ListArea");
+            
+            
+            for(var i=0;i<personList.length;i++){
+                var person=personList[i];
+                var newRow=document.createElement("div");
+
+                 newRow.id=person.id;
+                 if(person.age<10){
+                     newRow.innerHTML="<b>Çocuk</b>"
+                 }
+                 else if(person.age<20){
+                    newRow.innerHTML="<b>Genç</b>"
+                 }
+                 else{
+                    newRow.innerHTML="<b>Orta Yaş</b>"
+                 }
+                 listArea.appendChild(newRow);
+            }
+    
+        }
+        var car={
+            type:"Fiat",
+            model:"500L",
+            color:"White",
+            modelYear:2019
+        }
+        car.Speed="1234";
+
+
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript Exercise 2</h1>
+    <button onclick="Listele()">List</button>
+    <div id="ListArea"></div>
+</body>
+</html>
