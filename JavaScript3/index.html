@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Uygulama 3(ES6/ES5)</title>
+    <script>
+        class BaseHuman{
+            constructor(name){
+                this.name=name;
+                this.type='HumanBase'; 
+                console.log("Base Constructor");
+            }
+            walk(){
+                console.log("Base Walk");
+            }
+        }
+
+        class Saphiens extends BaseHuman{
+            constructor(name){
+                super(name)
+                this.type='Saphien';
+                console.log("Saphien Constructor");
+            }
+            walk(){
+                super.walk();
+                console.log("Saphien Walk");
+            }
+
+        }
+
+        function humanWalker(){
+            let human=new Saphiens("Ert");
+            human.walk();
+        }
+
+  
+
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript Exercise 3</h1>
+    <button onclick="humanWalker()">Walk</button>
+   
+</body>
+</html>
